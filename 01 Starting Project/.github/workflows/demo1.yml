@@ -1,7 +1,18 @@
 # naming the workflow
 name: Events Demo 1
 # mention the events to trigger
-on: ...
+on: 
+  # event 1
+  pull_request:
+    # types key- specify list of activity types of pull_req to trigger the workflow
+    types: 
+      - opened
+    #or - opened
+    #   - edited
+  # second trigger/event
+  workflow_dispatch:
+    # even if no details, : should be present
+# can also specify when the workflow should trigger to which branches; also has event - config . activity types and event filters will tell when exactly the workflow should be triggered by the event
 # define jobs
 jobs:
   # give the job name
