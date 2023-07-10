@@ -10,7 +10,7 @@ on:
     #or - opened
     #   - edited
   # second trigger/event
-  workflow_dispatch:
+  # workflow_dispatch:
     # even if no details, : should be present
 # can also specify when the workflow should trigger to which branches; also has event - config . activity types and event filters will tell when exactly the workflow should be triggered by the event
 # define jobs
