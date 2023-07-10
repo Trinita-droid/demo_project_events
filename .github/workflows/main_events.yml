@@ -1,5 +1,5 @@
 # naming the workflow
-name: Events Demo 1
+name: Events Demo 2
 # mention the events to trigger
 on: 
   # event 1
@@ -12,6 +12,15 @@ on:
   # second trigger/event
   workflow_dispatch:
     # even if no details, : should be present
+  push:
+    # adding branches filter then specify the list of branches that should trigger the workfloe
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**'
+    paths:
+      - '.github/workflows/*'
+    
 # can also specify when the workflow should trigger to which branches; also has event - config . activity types and event filters will tell when exactly the workflow should be triggered by the event
 # define jobs
 jobs:
